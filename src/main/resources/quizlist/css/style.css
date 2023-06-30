@@ -1,0 +1,68 @@
+@charset "utf-8";
+body {  background-color: #F5F5F5;}
+#wrap { width:100%; overflow: hidden; }
+
+/* 공용 스타일/////////////////////////////////////////////////////////////////////////// */
+
+.container { width:100%; }
+
+.wrap { width:100%; max-width:1110px; margin:0 auto; }
+.wrap .gap { margin:0 15px; }
+.wrap .gap .container { width:100%; }
+
+.title { width: 100%; }
+.title h2 { font-size: 14px; line-height: 24px; color: #212121; }
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+#header { width: 100%; height: 64px; background-color: #000; }
+
+#main { width: 100%; }
+#section { width: 100%; }
+.title_wrap { padding: 48px 0 32px; }
+.title_wrap h2 { font-size: 24px; line-height: 36px; display: inline-block;}
+
+.title_wrap .title_search { display: inline; padding-left: 40%; }
+.title_wrap .title_search span {margin-left: 5px;}
+.title_wrap .title_search select { background-color: white; }
+.title_wrap .title_search input[type="text"] {width: 320px; height: 42px; border: 1px solid #ddd; border-radius: 4px;}
+.title_wrap .title_search input[type="button"] {width: 66px; height: 42px; border: 1px solid #2099bb; background-color: #2099bb; color: white; border-radius: 4px;}
+
+
+.content_wrap { width: 100%; }
+.content_wrap .content_left  { float: left; width: 22%; height: 2010px; background-color: #fff; border: 1px solid #ddd; box-sizing: border-box; }
+.content_wrap .content_left > div { padding: 20px 20px; }
+.content_wrap .content_left > div ul li { margin-bottom: 30px; }
+
+.content_wrap .content_left > div ul li .content span { margin-left: 10px; }
+.content_wrap .content_left > div ul li .content h1 span { margin-left: 10px; font-size: 12px; color: #616161;}
+.content_wrap .content_left > div ul li .content input[type="checkbox"] { margin: 10px 0 4px; }
+.content_wrap .content_left > div ul li .content input[type="date"] { margin: 10px 0 4px; }
+.content_wrap .content_left > div ul li .content select { margin: 10px 0 4px; }
+
+.content_wrap .content_right { float: left; width: 78%; height: 2010px; background-color: blue; }
+
+.content_wrap .content_right .content_row1 { width: 100%; height: 115px; background-color: white; border: 1px solid #ddd; border-left: 0px;}
+.content_wrap .content_right .content_row1 .content_title {padding: 24px; padding-bottom: 30px;}
+.content_wrap .content_right .content_row1 .content_title h1 {font-size: 16px;}
+
+.content_wrap .content_right .content_row1 .content_row1-1{padding-left: 36px; padding-top: 8px; display: inline;}
+.content_wrap .content_right .content_row1 .content_row1-1 span { color: #616161; font-size: 12px; }
+
+/* background: url(./images/s1.png) 0 0 no-repeat; display: block; width: 103px; height: 28px; float: left; */
+
+.content_wrap .content_right .content_row1 .content_row1-1 input[type="radio"] { display: none; }
+.content_wrap .content_right .content_row1 .content_row1-1 .list::before{content: ""; display: inline-block; margin-right: 6px; background-image: url(/img/check-inactive.png); background-size: 10px 8px; height: 8px; width: 10px;}
+
+.content_wrap .content_right .content_row2 { width: 100%; height: 1845px; background-color: white; border: 1px solid #ddd; border-left: 0px; border-top: 0px; }
+
+.content_wrap .content_right .content_row2 .content_row2-info-box { height: 183.5px; border-bottom: solid 1px #e0e0e0; }
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_label { padding-top: 20px; padding-left: 30px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .subject-mark {background-color: #00a878; border: 1px solid #00a878; color: #fff; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .title-mark {background-color: #3ba3c7; border: 1px solid #3ba3c7; color: #fff; width: 60px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_row2-heading{padding-left: 30px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_row2-title {margin-top: 12px; font-size: 18px;}
+
+#footer { width: 100%; }
