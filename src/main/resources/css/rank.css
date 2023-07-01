@@ -104,6 +104,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 
 
 .page {
@@ -237,6 +241,9 @@ img {
 }
 
 .store-category-nav li:hover {
+    cursor: pointer;
+    background-color: #f7f7f7;
+    color: #666;
     
 } 
 .store-category-nav li {
@@ -385,6 +392,33 @@ img {
     border-color: #1c87a5;
 }
 
+.btn-wishket:hover {
+    color: #fff;
+    background-color: #24abd1;
+    border-color: #2099bb;
+}
+
+.btn {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline !important;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid rgba(0,0,0,0);
+    *border: 0;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 2px;
+    -webkit-user-select: none;
+
+}
+
 
 .pagination-wrapper {
     text-align: center;
@@ -417,6 +451,31 @@ img {
     padding: 4px 8px;
     line-height: 20px;
     font-weight: bold;
-    font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
     text-decoration: none;
+    color: #999;
+    margin-left: 10px;
 }
+
+.pagination>li>a:hover{
+    color: #15647a;
+
+}
+
+.pagination>li>a {
+    position: relative;
+    float: left;
+    padding: 4px 8px;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    color: #999;
+    margin-left: 10px;
+}
+
+
+
+
+
+
