@@ -62,7 +62,7 @@ header.header {
     min-width: 1080px;
 }
 
-section.white-color {
+.white-color {
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
 }
@@ -256,7 +256,28 @@ section.white-color {
     margin-bottom: 4px;
 }
 
-/* 무조건 맨 아래 있어야 함 */
-.black-color .no-login, .white-color .yes-login {
-    display: none;
+.header .sub-nav-partner {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header .sub-nav-partner .left-nav .snb-menu {
+    padding: 12px 20px;
+    display: block;
+    float: left;
+    color: #616161;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.header .sub-nav-partner .left-nav .snb-menu + .snb-menu {
+    margin-left: 8px;
+}
+
+.container::after {
+    content: '';
+    display: table;
+    clear: both;
 }

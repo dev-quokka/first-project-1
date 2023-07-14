@@ -1,0 +1,891 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', Sans-serif;
+    line-height: 1rem;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.title-1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.body-1 {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.body-2 {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.body-3 {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.text400 {
+    color: #9e9e9e;
+}
+
+.text500 {
+    color: #757575;
+}
+
+.text700 {
+    color: #424242;
+}
+
+.text900 {
+    color: #212121;
+}
+
+.subtitle-2-medium {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.subtitle-2 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border-radius: 4px;
+    border: none;
+}
+
+.text-button-1, .btn-blg {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.text-wishket {
+    color: #3ba3c7;
+}
+
+.body-1-medium {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.title-2 {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 400;
+}
+
+.caption-1 {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.subtitle-1 {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+.label-skill {
+    border-radius: 4px;
+    background-color: #eee;
+    padding: 1px 8px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    color: #616161;
+    margin-right: 8px;
+}
+
+.btn-white-wishket {
+    background-color: #fff;
+    color: #2099bb;
+}
+
+.btn-lg {
+    font-weight: normal;
+    border-radius: 4px;
+    padding: 11px 24px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.btn-blg {
+    font-weight: normal;
+    border-radius: 4px;
+    padding: 16px 32px;
+}
+
+.btn-wishket {
+    background-color: #2099bb;
+    color: #fff;
+    border: #2099bb;
+}
+
+.btn-center-block {
+    text-align: center;
+}
+
+.gaia {
+    min-width: 1080px;
+    height: auto;
+    min-height: 70%;
+}
+
+.gaia:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+body.landing .introduction {
+    padding: 53px 0 67px;
+    background-color: #fff;
+    background-image: url("https://www.wishket.com/static/renewal/img/landing/introduction/background.png");
+    background-position: top center;
+    background-repeat: no-repeat
+}
+
+.container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+body.landing .introduction .introduction-guide {
+    padding-top: 10px;
+    float: left;
+    margin: 40px 0 32px;
+}
+
+body.landing .introduction .introduction-guide .title-wrapper {
+    width: 552px;
+    margin-bottom: 20px;
+}
+
+body.landing .introduction .introduction-guide .title {
+    display: flex;
+    overflow: hidden;
+}
+
+body.landing .introduction .introduction-guide .title .rolling-title {
+    position: relative;
+    display: inline-block;
+}
+
+body.landing .introduction .introduction-guide .guide-body {
+    margin-bottom: 48px;
+    margin-top: 2px;
+    color: #616161;
+}
+
+body.landing .introduction .introduction-guide .guide-btn {
+    background-color: #3ba3c7;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 16px 28px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+body.landing .introduction .introduction-img {
+    float: right;
+    margin-top: 35px;
+    margin-left: 39px;
+}
+
+body.landing .introduction .introduction-guide .title .rolling-title .gradient-title {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    max-height: 64px;
+    max-width: 500px;
+    background-image: linear-gradient(to left, #63c9ab, #3ba3c7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,0)
+}
+
+body.landing .recommend-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 60px;
+    background-color: #fff;
+}
+
+body.landing .recommend-filter .recommend-content {
+    width: 344px;
+    height: 208px;
+    margin-right: 24px;
+    padding: 28px 28px 25px 32px;
+    border-radius: 16px;
+    border: solid 1px #e6ebf0;
+    float: left;
+}
+
+body.landing .recommend-filter .recommend-content .recommend-title {
+    text-align: left;
+}
+
+body.landing .recommend-filter .recommend-content .recommend-title .recommend-main {
+    font-weight: 500;
+}
+
+body.landing .recommend-filter .recommend-content .recommend-link {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+body.landing .recommend-filter .recommend-content .recommend-link:after {
+    content: "";
+    margin-left: 2px;
+    background-size: 14px 14px;
+    height: 14px;
+    width: 14px;
+    background-image: url("https://www.wishket.com/static/renewal/img/mywishket/btn-icon-go-w.png");
+}
+
+body.landing .recommend-filter .recommend-content .recommend-image {
+    margin-top: 4px;
+    float: right;
+}
+
+body.landing .project-finder {
+    background-color: #fff;
+    padding: 78px 0 160px;
+}
+
+body.landing .project-finder .project-finder-title {
+    font-size: 36px;
+    color: #212121;
+    line-height: 52px;
+}
+
+body.landing .project-finder .project-finder-nav {
+    margin-top: 44px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+body.landing .project-finder .project-finder-nav::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body.landing .project-finder .project-finder-nav .project-finder-nav-link.active {
+    color: #212121;
+    font-weight: bold;
+    border-bottom: 2px solid #212121;
+    margin-bottom: -1px;
+}
+
+body.landing .project-finder .project-finder-nav .project-finder-nav-link {
+    color: #616161;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    float: left;
+    cursor: pointer;
+}
+
+body.landing .project-finder .project-finder-nav .project-finder-nav-link.active {
+    color: #212121;
+    font-weight: bold;
+    border-bottom: 2px solid #212121;
+    margin-bottom: -1px;
+}
+
+body.landing .project-finder .project-finder-list {
+    margin-top: 25px;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card {
+    margin: 0 24px 20px 0;
+    float: left;
+    padding: 24px 32px;
+    width: 528px;
+    box-shadow: 0 1px 4px 0 rgba(230,235,240,.8);
+    border: solid 1px #e6ebf0;
+    border-radius: 16px;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card:nth-child(2) {
+    margin-right: 0
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card:nth-child(3) {
+    margin-bottom: 0
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card:nth-child(4) {
+    margin-right: 0;
+    margin-bottom: 0
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-finder-link {
+    display: block;
+    color: #212121;
+    font-weight: 500;
+    line-height: 1.56;
+    max-width: 480px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-number-info {
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-number-info span {
+    vertical-align: top;
+    display: inline-block;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-number-info .project-finder-number-data {
+    color: #424242;
+    font-weight: 500;
+    line-height: 1.71;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-number-info .project-finder-number-data + span {
+    color: #e0e0e0;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-weight: lighter;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-number-info span.number-info-divider {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-type-info {
+    margin-bottom: 16px;
+    color: #616161;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-type-info .divider {
+    color: #e0e0e0;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -1px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-skill-info {
+    height: 24px;
+    display: flex;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-skill-info .start-recruit-info {
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-skill-info .label-skill {
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 13px;
+    max-width: 94px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body.landing .project-finder .project-finder-list .project-finder-card .project-skill-info .number-info-divider {
+    color: #e0e0e0;
+    margin-left: 0;
+    margin-right: 8px;
+    font-weight: lighter;
+    vertical-align: top;
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+body.landing .project-finder .project-finder-nav .project-finder-nav-link + .project-finder-nav-link {
+    margin-left: 40px;
+}
+
+body.landing .landing-banner {
+    padding: 48px 0;
+    height: 144px;
+    background-image: url(https://www.wishket.com/static/renewal/img/landing/banner/banner_background_01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.landing .landing-banner .project-submit-guide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    width: 966px;
+}
+
+body.landing .landing-banner .project-submit-guide .guide-text {
+    margin-top: 6px;
+    margin-right: 60px;
+    color: #fff;
+}
+
+body.landing .landing-banner .project-submit-guide .guide-btn {
+    border-radius: 8px;
+}
+
+body.landing .appeal-point {
+    background-color: #f7fafc;
+    padding: 160px 0;
+}
+
+body.landing .appeal-point .appeal-title {
+    font-size: 36px;
+    color: #212121;
+    line-height: 52px;
+    margin-bottom: 60px;
+}
+
+body.landing .appeal-point .appeal-box {
+    display: flex;
+    align-items: center;
+}
+
+body.landing .appeal-point .appeal-box .appeal-content {
+    width: 280px;
+    margin-right: 60px;
+    border-right: solid 1px #e6ebf0;
+}
+
+body.landing .appeal-point .appeal-box .appeal-content .appeal-content-title {
+    font-weight: 500;
+    line-height: 48px;
+    color: #212121;
+}
+
+body.landing .appeal-point .appeal-box .appeal-content .appeal-body {
+    margin-top: 12px;
+    color: #616161;
+}
+
+body.landing .partner-appeal {
+    padding: 160px 0;
+    background-color: #fff;
+}
+
+body.landing .partner-appeal .partner-appeal-title {
+    line-height: 52px;
+    font-size: 36px;
+    color: #212121;
+    margin-bottom: 36px;
+}
+
+body.landing .partner-appeal .card-box {
+    display: flex;
+}
+
+body.landing .partner-appeal .card-box .card {
+    margin-top: 24px;
+    padding: 40px 52px;
+    border-radius: 24px;
+    background-color: #f7fafc;
+}
+
+body.landing .partner-appeal .card-box .professional-pool {
+    width: 488px;
+    margin-right: 24px;
+}
+
+body.landing .partner-appeal .card-box .card .card-title {
+    font-weight: 500;
+    color: #212121;
+}
+
+body.landing .partner-appeal .card-box .card .card-body {
+    margin-top: 8px;
+    font-weight: 300;
+    color: #212121;
+}
+
+body.landing .partner-appeal .card-box .professional-pool .card-content {
+    margin-top: 140px;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1;
+    color: #3ba3c7;
+}
+
+body.landing .partner-appeal .card-box .professional-pool .card-content .counter {
+    margin-right: 12px;
+}
+
+body.landing .partner-appeal .card-box .tech-experience {
+    width: 568px;
+    background-color: #f2fcff;
+}
+
+body.landing .partner-appeal .card-box .tech-experience img {
+    margin: 40px 0 -48px -52px;
+    object-fit: cover;
+}
+
+body.landing .partner-appeal .card-box .portfolio {
+    width: 652px;
+    margin-right: 24px;
+    background-color: #e8faff;
+}
+
+body.landing .partner-appeal .card-box .portfolio img {
+    border-bottom-left-radius: 24px;
+    margin: 10px 0 -50px -52px;
+    object-fit: cover;
+}
+
+body.landing .partner-appeal .card-box .evaluation {
+    width: 404px;
+}
+
+body.landing .partner-appeal .card-box .evaluation .card-content {
+    margin-top: 168px;
+    text-align: right;
+}
+
+body.landing .price-agreement-guide {
+    padding-bottom: 160px;
+    background-color: #fff;
+}
+
+body.landing .price-agreement-guide .price-agreement-guide-title {
+    margin-bottom: 60px;
+    font-size: 36px;
+    line-height: 52px;
+    color: #212121;
+}
+
+body.landing .price-agreement-guide .card-box {
+    display: flex;
+}
+
+body.landing .price-agreement-guide .card-box .card {
+    padding: 40px 52px;
+    width: 528px;
+    border-radius: 24px;
+    background-color: #f7fafc;
+}
+
+body.landing .price-agreement-guide .card-box .price {
+    margin-right: 24px;
+    background-color: #f7fafc;
+}
+
+body.landing .price-agreement-guide .card-box .card .card-title {
+    font-weight: 500;
+    color: #212121;
+}
+
+body.landing .price-agreement-guide .card-box .card .card-body {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    color: #212121;
+}
+
+body.landing .price-agreement-guide .card-box .card .card-content {
+    display: flex;
+}
+
+body.landing .price-agreement-guide .card-box .card .card-content .card-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 160px;
+    height: 26px;
+}
+
+body.landing .price-agreement-guide .card-box .card .card-content .card-link:after {
+    content: "";
+    margin-left: 2px;
+    background-size: 14px 14px;
+    height: 14px;
+    width: 14px;
+    background-image: url("https://www.wishket.com/static/renewal/img/mywishket/btn-icon-go-w.png");
+}
+
+body.landing .price-agreement-guide .card-box .card .card-content img {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+body.landing .price-agreement-guide .card-box .agreement {
+    background-color: #f5f9ff;
+}
+
+body.landing .process-guide {
+    background-color: #f7fafc;
+    padding: 160px 0;
+}
+
+body.landing .process-guide .guide-title {
+    font-size: 36px;
+    line-height: 52px;
+    margin-bottom: 80px;
+}
+
+body.landing .process-guide .process-guide-box {
+    display: flex;
+    height: auto;
+}
+
+body.landing .process-guide .process-guide-box .process-description-group:first-child {
+    margin-top: 48px;
+}
+
+body.landing .process-guide .process-guide-box .process-description-group .process-description {
+    padding-right: 152px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+body.landing .process-guide .process-guide-box .process-description-group .process-description:first-child {
+    padding-top: 0;
+}
+
+body.landing .process-guide .process-guide-box .process-description-group .process-description .process-number {
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #3ba3c7;
+}
+
+body.landing .process-guide .process-guide-box .process-description-group .process-description .process-number .process-step {
+    margin-right: 8px;
+}
+
+body.landing .process-guide .process-guide-box .process-description-group .process-description .process-title {
+    margin-bottom: 24px;
+    font-weight: 500;
+    color: #212121;
+}
+
+body.landing .process-guide .process-guide-box .process-description-group .process-description .process-body {
+    color: #616161;
+}
+
+body.landing .process-guide .process-guide-box .process-card {
+    height: 444px;
+    position: sticky;
+    top: 160px;
+}
+
+body.landing .process-guide .process-guide-box .process-card .process-img {
+    width: 528px;
+    height: 364px;
+    position: relative;
+}
+
+body.landing .process-guide .process-guide-box .process-card .process-img img {
+    border-radius: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .3s;
+}
+
+body.landing .process-guide .process-guide-box .process-card .process-img .active {
+    opacity: 1;
+    transition: .3s;
+}
+
+body.landing .process-guide .process-guide-box .process-card .progress-bar-box {
+    margin-top: 24px;
+    display: flex;
+}
+
+body.landing .process-guide .process-guide-box .process-card .progress-bar-box:last-child {
+    margin-right: 0;
+}
+
+body.landing .process-guide .process-guide-box .process-card .progress-bar-box .progress-bar-group {
+    margin-right: 8px;
+}
+
+body.landing .process-guide .process-guide-box .process-card .progress-bar-box .progress-bar-group .progress-bar {
+    width: 126px;
+    height: 4px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    background-color: #e6ebf0;
+}
+
+body.landing .process-guide .process-guide-box .process-card .progress-bar-box .progress-bar-group .active {
+    background-color: #3ba3c7;
+}
+
+body.landing .process-guide .process-guide-box .process-card .progress-bar-box .progress-bar-group .progress-description {
+    width: 126px;
+    color: #616161;
+}
+
+body.landing .client-list {
+    background-color: #fff;
+    padding: 160px 0 100px;
+    text-align: center;
+}
+
+body.landing .client-list .client-list-title {
+    font-size: 36px;
+    line-height: 52px;
+    color: #212121;
+}
+
+body.landing .client-list .carousel-box {
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+body.landing .user-review {
+    background-color: #fff;
+    padding: 20px 0 430px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+body.landing .user-review .review-card {
+    width: 414px;
+    height: 270px;
+    padding: 28px 32px;
+    box-shadow: 0 1px 4px 0 rgba(230,235,230,.8);
+    border-radius: 16px;
+    border: solid 1px #e6ebf0;
+    background-color: #fff;
+    position: absolute
+}
+
+body.landing .user-review .review-card .review-bullet {
+    width: 24px;
+    height: 24px
+}
+
+body.landing .user-review .review-card p {
+    word-break: break-all;
+    width: 348px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    color: #212121
+}
+
+body.landing .last-chance {
+    padding: 100px 0 120px;
+    background-image: url(https://www.wishket.com/static/renewal/img/landing/banner/last_chance.png);
+    background-position: center center;
+    background-size: cover;
+    align-items: center;
+}
+
+body.landing .last-chance .last-chance-subtitle {
+    text-align: center;
+    color: #616161;
+    margin-bottom: 16px;
+}
+
+body.landing .last-chance .last-chance-guide {
+    text-align: center;
+    color: #0d0f14;
+    margin-bottom: 48px;
+    font-size: 36px;
+    line-height: 1.44;
+}
+
+body.landing .last-chance .last-chance-btn {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: 12px;
+}
