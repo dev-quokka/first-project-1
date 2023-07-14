@@ -1,0 +1,108 @@
+@charset "utf-8";
+body {  background-color: #F5F5F5;}
+#wrap { width:100%; overflow: hidden; }
+
+/* 공용 스타일/////////////////////////////////////////////////////////////////////////// */
+
+.container { width:100%; }
+
+.wrap { width:100%; max-width:1110px; margin:0 auto; }
+.wrap .gap { margin:0 15px; }
+.wrap .gap .container { width:100%; }
+
+.title { width: 100%; }
+.title h2 { font-size: 14px; line-height: 24px; color: #212121; font-weight: 500;}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+#header { width: 100%; height: 64px; background-color: #000; }
+
+#main { width: 100%; height: 2287px;}
+#section { width: 100%; }
+.title_wrap { padding: 48px 0 32px; }
+.title_wrap h2 { font-size: 24px; line-height: 36px; display: inline-block; font-weight: 500;}
+
+.title_wrap .title_search { display: inline; padding-left: 40%; }
+.title_wrap .title_search span {margin-left: 5px;}
+.title_wrap .title_search select { background-color: white; }
+.title_wrap .title_search select:hover {border: 1px solid #2099bb; outline: none;}
+
+.title_wrap .title_search input[type="text"] {width: 320px; height: 42px; border: 1px solid #ddd; border-radius: 4px; outline: none;}
+.title_wrap .title_search input[type="text"]:hover {border: 1px solid #2099bb; outline: none;}
+
+.title_wrap .title_search input[type="button"] {width: 66px; height: 42px; border: 1px solid #2099bb; background-color: #2099bb; color: white; border-radius: 4px;}
+
+
+.content_wrap { width: 100%; border: 1px solid #ddd; }
+
+.content_wrap .content_left  { float: left; width: 22%; height: 2050px; background-color: #fff; border-right: 1px solid #ddd; box-sizing: border-box; }
+.content_wrap .content_left > div { padding: 20px 20px; }
+.content_wrap .content_left > div ul li { margin-bottom: 30px; }
+
+.content_wrap .content_left > div ul li .content span { margin-left: 10px }
+.content_wrap .content_left > div ul li .content h1 span { margin-left: 10px; font-size: 12px; color: #616161;}
+.content_wrap .content_left > div ul li .content input[type="checkbox"] { margin: 10px 0 4px; accent-color:#2099bb; outline: none;}
+
+/* .content_wrap .content_left > div ul li .content-selected {margin: 10px 0 4px;}
+.content_wrap .content_left > div ul li .content-selected span {font-size: 12px; color: #616161;}
+.content_wrap .content_left > div ul li .content-selected input[type="checkbox"] { display: none;}
+.content_wrap .content_left > div ul li .content-selected .selected-box::before  {content: ""; display: inline-block; margin-right: 7px; background-size: 15px 15px; height: 15px; width: 15px; vertical-align: middle; background-image: url(/src/main/resources/img/input-roundcheckbox-unselected.png);} */
+
+.content_wrap .content_left > div ul li .content input[type="date"] { margin: 10px 0 4px; }
+.content_wrap .content_left > div ul li .content input[type="date"]:hover { border: 1px solid #2099bb; }
+
+.content_wrap .content_left > div ul li .content select { margin: 10px 0 4px; }
+.content_wrap .content_left > div ul li .content select:hover { border: 1px solid #2099bb; }
+
+.content_wrap .content_right { float: left; width: 78%; height: 2050px; background-color: white; }
+
+.content_wrap .content_right .content_row1 { width: 100%; height: 115px; background-color: white; border-bottom: 1px solid #ddd;}
+.content_wrap .content_right .content_row1 .content_title {padding: 24px; padding-bottom: 30px;}
+.content_wrap .content_right .content_row1 .content_title h1 {font-size: 16px;}
+
+.content_wrap .content_right .content_row1 .content_row1-1{padding-left: 36px; padding-top: 8px; display: inline;}
+.content_wrap .content_right .content_row1 .content_row1-1 span { color: #616161; font-size: 13px; }
+.content_wrap .content_right .content_row1 .content_row1-1 span:checked {color: #2099bb;}
+
+.content_wrap .content_right .content_row1 .content_row1-1 input[type="radio"] { display: none; }
+.content_wrap .content_right .content_row1 .content_row1-1 input[type="radio"]:checked + span {color: #2099bb;}
+.content_wrap .content_right .content_row1 .content_row1-1 .list::before{content: ""; display: inline-block; margin-right: 6px; background-image: url(/src/main/resources/img/quizlist/check-inactive.png); background-size: 10px 8px; height: 8px; width: 10px;}
+
+.content_wrap .content_right .content_row2 { width: 100%; height: 1830px; background-color: white;  }
+
+.content_wrap .content_right .content_row2 .content_row2-info-box { height: 182px; border-bottom: solid 1px #e0e0e0; background: white; }
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_label { padding-top: 20px; padding-left: 30px;}
+
+.content_wrap .content_right .content_row2 .content_row2-info-box .subject-mark-1 {background-color: #00a878; border: 1px solid #00a878; color: #fff; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .subject-mark-2 {background-color: #00a878; border: 1px solid #00a878; color: #fff; width: 60px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .title-mark-test {background-color: #3ba3c7; border: 1px solid #3ba3c7; color: #fff; width: 60px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .title-mark-school {background-color: #ff7f00; border: 1px solid #ff7f00; color: #fff; width: 60px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_row2-heading{padding-left: 30px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_row2-title {margin-top: 12px; font-size: 18px; color: #212121; font-weight: 500;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_row2-title:hover {color: #2099bb;}
+
+.content_wrap .content_right .content_row2 .content_row2-info-box:hover {background: #F5F5F5;}
+
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_row2-body .list-info {margin-left: 30px; margin-top: 20px; }
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_row2-body .list-detail .list-detail-body {margin-bottom: 10px; color: #313131;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_row2-body .list-detail  span {font-size: 15px;  color: #313131; }
+.content_wrap .content_right .content_row2 .content_row2-info-box .content_row2-body .list-info-line {margin-left: 30px; margin-right: 30px; margin-top: 20px; border-top: 1px solid #d3d3d3; }
+
+.content_wrap .content_right .content_row2 .content_row2-info-box .body-info-tag {margin-top: 12px; margin-left: 30px; }
+.content_wrap .content_right .content_row2 .content_row2-info-box .class-mark-1 {background-color: #fff9e0; border: 1px solid #f28a05; color: #f28a05; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .class-mark-2 {background-color: #dcedc8; border: 1px solid #009000; color: #008000; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .class-mark-3 {background-color: #ffdcdc; border: 1px solid #b24a4a; color: #b24a4a; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .content_right .content_row2 .content_row2-info-box .subject-detail-mark {margin-left: 10px; background-color: #e8faff; border: 1px solid #369cc2; color: #369cc2; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+
+.content_wrap .content_right .pagination {width: 100%; height: 105px; text-align: center; line-height: 105px;}
+.content_wrap .content_right .pagination li{display: inline-block; cursor: pointer;}
+.content_wrap .content_right .page-link.active{ color: #3ba3c7; font-size: 14px; text-align: center; line-height: 30px; min-width: 32px; border: 1px solid #d3d3d3; border-radius: 2px; outline: none;}
+
+.content_wrap .content_right .page-link{position: relative; display: block; font-size: 14px; line-height: 30px; min-width: 32px; text-align: center; font-weight: 500; color: #616161; text-decoration: none; border: 1px solid transparent; outline: none;}
+.content_wrap .content_right .page-link:hover {color: #3ba3c7;}
+
+.content_wrap .content_right .page-link .img-concert{height: 30px; width: 32px;}
+
+#footer { width: 100%;}

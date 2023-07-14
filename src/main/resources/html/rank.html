@@ -1,48 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>랭킹</title>
     <link rel="stylesheet" href="../css/rank.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="../js/rank.js"></script>
 </head>
 
 <body id="wrap">
-    <header class="header">
-        <section class="base-nav-guest">
-            <div class="container">
-                <a class="nav-logo-wrapper">wishket</a>
-                <div class="left-nav">
-                    <a class="gnb-menu body-2">프로젝트 등록</a>
-                    <a class="gnb-menu body-2">프로젝트 찾기</a>
-                    <a class="gnb-menu body-2">파트너스 찾기</a>
-                    <a class="gnb-menu body-2">프로젝트 등록</a>
-                    <a class="gnb-menu body-2">이용방법</a>
-                    <a class="gnb-menu body-2">이용후기</a>
-                    <a class="gnb-menu body-2">스토어</a>
-                </div>
-            </div>
-            <div>
-                <a>로그인</a>
-                <a>회원가입</a>
-            </div>
-        </section>
-    </header>
-
-    <div>
+<div id="header"></div>
+    <div class="body-content">
         <div class="page">
             <div class="content">
                 <div class="content-header contents-header-addon">
                     <div class="store-header-box">
-                        <h3 class="store-big-text">위시켓 스토어</h3>
-                        <p class="store-small-text">클라이언트와 파트너의 프로젝트에 꼭 필요한 서비스들이 준비되어 있습니다.</p>
+                        <h3 class="store-big-text">랭 킹</h3>
+                        <p class="store-small-text">모든 학생들의 카테고리 별 순위를 확인할 수 있습니다.</p>
                     </div>
                     <a class="store-call-link">
                         <div class="store-call-box">
                             <img class="store-call-image" src="../img/communication.svg">
-                            <span class="store-call-text">구매 상담하기</span>
+                            <span class="store-call-text">관리자와 상담하기</span>
                         </div>
                     </a>
                 </div>
@@ -52,16 +31,14 @@
                         <section class="store-category-nav">
                             <ul>
                                 <li role="presentation"><a>전체</a></li>
-                                <li class="active-li" role="서버 & 클라우드"><a>서버 & 클라우드</a></li>
-                                <li role="도메인"><a>도메인</a></li>
-                                <li role="SSL 인증서"><a>SSL 인증서</a></li>
-                                <li role="IDE"><a>IDE</a></li>
-                                <li role="보안 솔루션"><a>보안 솔루션</a></li>
-                                <li role="서비스 솔루션"><a>서비스 솔루션</a></li>
-                                <li role="메시지 & 메일"><a>메시지 & 메일</a></li>
-                                <li role="테스트"><a>테스트</a></li>
-                                <li role="전자결제(PG)"><a>전자결제(PG)</a></li>
-                                <li role="기타"><a>기타</a></li>
+                                <li class="active-li" role="국어"><a>국어</a></li>
+                                <li role="수학"><a>수학</a></li>
+                                <li role="영어"><a>영어</a></li>
+                                <li role="한국사"><a>한국사</a></li>
+                                <li role="사회탐구"><a>사회탐구</a></li>
+                                <li role="과학탐구"><a>과학탐구</a></li>
+                                <li role="직업탐구"><a>직업탐구</a></li>
+                                <li role="제2외국어/한문"><a>제2외국어/한문</a></li>
                             </ul>
                         </section>
 
@@ -79,28 +56,23 @@
                         <div class="store-list-box">
                             <div style="float:left; width: 165px;">
                                 <a>
-                                    <img src="../img/thumbnail.png" style="width: 163px; height: 163px;">
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
                                 </a>
                             </div>
-                            <div style="position:absolute; width: 0">
-                                <img class="lowest-price-img" src="../img/lowprice-img.png">
-                            </div>
+                            <div class="rank-box">1</div>
                             <div
                                 style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
-                                <a class="product-name-link lih18">AWS</a>
+                                <a class="product-name-link lih18" >USER1</a>
                                 <p style="margin: 3px 0 5px 0 ">
-                                    <span class="product-category">서버 * 클라우드</span>
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
                                     <span class="base-info-splitter">|</span>
-                                    <span class="product-alliance">위시켓</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
                                 </p>
-                                <p class="product-description-text">AWS를 할인없이 이용하고 있거나 도입을 고민 중이라면, 위시켓을 통해 최대 할인 혜택을
-                                    누려보세요.</p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
                                 <p class="product-short-description-text lih19" style="margin-bottom: 0;">
-                                    "- 아무 조건 없이 기본 5%, 사용량에 따라 최대 15% 할인"
-                                    <br>
-                                    "- 신규 가입자, 기존 사용자 모두 가능"
-                                    <br>
-                                    "- 단순 할인뿐만 아니라 기술지원 & 장애 문의도 무상 지원"
+                                    "나를 이길자 누가 있는가"
                                 </p>
                             </div>
                             <div
@@ -109,165 +81,471 @@
                                     <div style="clear: both;"></div>
                                 </div>
                                 <div style="width: 100%; height: 80px; position:relative;">
-                                    <div
-                                        style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
-                                        <p
-                                            style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
-                                            "기본 5% ~"
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
                                             <br>
-                                            "최대 15% 할인"
+                                            확인하기
                                         </p>
                                     </div>
                                 </div>
-                                <a class="btn btn-wishket" style="width: 100;">구매 신청 하기</a>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
                             </div>
                         </div>
 
                         <div class="store-list-box">
                             <div style="float:left; width: 165px;">
                                 <a>
-                                    <img src="../img/thumbnail.png" style="width: 163px; height: 163px;">
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
                                 </a>
                             </div>
-                            <div style="position:absolute; width: 0">
-                                <img class="lowest-price-img" src="../img/lowprice-img.png">
-                            </div>
+                            <div class="rank-box">2</div>
                             <div
-                                style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
-                                <a class="product-name-link lih18">AWS</a>
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER2</a>
                                 <p style="margin: 3px 0 5px 0 ">
-                                    <span class="product-category">서버 * 클라우드</span>
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
                                     <span class="base-info-splitter">|</span>
-                                    <span class="product-alliance">위시켓</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">180</span>
                                 </p>
-                                <p class="product-description-text">AWS를 할인없이 이용하고 있거나 도입을 고민 중이라면, 위시켓을 통해 최대 할인 혜택을
-                                    누려보세요.</p>
+                                <p class="product-description-text">정답 비율 : 80%</p>
                                 <p class="product-short-description-text lih19" style="margin-bottom: 0;">
-                                    "- 아무 조건 없이 기본 5%, 사용량에 따라 최대 15% 할인"
-                                    <br>
-                                    "- 신규 가입자, 기존 사용자 모두 가능"
-                                    <br>
-                                    "- 단순 할인뿐만 아니라 기술지원 & 장애 문의도 무상 지원"
+                                    "2등.."
                                 </p>
                             </div>
                             <div
-                                style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
                                 <div class="width: 100%; height: 45px; position:relative;">
                                     <div style="clear: both;"></div>
                                 </div>
                                 <div style="width: 100%; height: 80px; position:relative;">
-                                    <div
-                                        style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
-                                        <p
-                                            style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
-                                            "기본 5% ~"
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
                                             <br>
-                                            "최대 15% 할인"
+                                            확인하기
                                         </p>
                                     </div>
                                 </div>
-                                <a class="btn btn-wishket" style="width: 100;">구매 신청 하기</a>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
                             </div>
                         </div>
 
                         <div class="store-list-box">
                             <div style="float:left; width: 165px;">
                                 <a>
-                                    <img src="../img/thumbnail.png" style="width: 163px; height: 163px;">
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
                                 </a>
                             </div>
-                            <div style="position:absolute; width: 0">
-                                <img class="lowest-price-img" src="../img/lowprice-img.png">
-                            </div>
+                            <div class="rank-box">3</div>
                             <div
-                                style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
-                                <a class="product-name-link lih18">AWS</a>
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER3</a>
                                 <p style="margin: 3px 0 5px 0 ">
-                                    <span class="product-category">서버 * 클라우드</span>
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
                                     <span class="base-info-splitter">|</span>
-                                    <span class="product-alliance">위시켓</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">100</span>
                                 </p>
-                                <p class="product-description-text">AWS를 할인없이 이용하고 있거나 도입을 고민 중이라면, 위시켓을 통해 최대 할인 혜택을
-                                    누려보세요.</p>
+                                <p class="product-description-text">정답 비율 : 50%</p>
                                 <p class="product-short-description-text lih19" style="margin-bottom: 0;">
-                                    "- 아무 조건 없이 기본 5%, 사용량에 따라 최대 15% 할인"
-                                    <br>
-                                    "- 신규 가입자, 기존 사용자 모두 가능"
-                                    <br>
-                                    "- 단순 할인뿐만 아니라 기술지원 & 장애 문의도 무상 지원"
+                                    3등...
                                 </p>
                             </div>
                             <div
-                                style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
                                 <div class="width: 100%; height: 45px; position:relative;">
                                     <div style="clear: both;"></div>
                                 </div>
                                 <div style="width: 100%; height: 80px; position:relative;">
-                                    <div
-                                        style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
-                                        <p
-                                            style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
-                                            "기본 5% ~"
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
                                             <br>
-                                            "최대 15% 할인"
+                                            확인하기
                                         </p>
                                     </div>
                                 </div>
-                                <a class="btn btn-wishket" style="width: 100;">구매 신청 하기</a>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
                             </div>
                         </div>
 
                         <div class="store-list-box">
                             <div style="float:left; width: 165px;">
                                 <a>
-                                    <img src="../img/thumbnail.png" style="width: 163px; height: 163px;">
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
                                 </a>
                             </div>
-                            <div style="position:absolute; width: 0">
-                                <img class="lowest-price-img" src="../img/lowprice-img.png">
-                            </div>
+                            <div class="rank-box">4</div>
                             <div
-                                style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
-                                <a class="product-name-link lih18">AWS</a>
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER4</a>
                                 <p style="margin: 3px 0 5px 0 ">
-                                    <span class="product-category">서버 * 클라우드</span>
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
                                     <span class="base-info-splitter">|</span>
-                                    <span class="product-alliance">위시켓</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
                                 </p>
-                                <p class="product-description-text">AWS를 할인없이 이용하고 있거나 도입을 고민 중이라면, 위시켓을 통해 최대 할인 혜택을
-                                    누려보세요.</p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
                                 <p class="product-short-description-text lih19" style="margin-bottom: 0;">
-                                    "- 아무 조건 없이 기본 5%, 사용량에 따라 최대 15% 할인"
-                                    <br>
-                                    "- 신규 가입자, 기존 사용자 모두 가능"
-                                    <br>
-                                    "- 단순 할인뿐만 아니라 기술지원 & 장애 문의도 무상 지원"
+                                    "나를 이길자 누가 있는가"
                                 </p>
                             </div>
                             <div
-                                style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
                                 <div class="width: 100%; height: 45px; position:relative;">
                                     <div style="clear: both;"></div>
                                 </div>
                                 <div style="width: 100%; height: 80px; position:relative;">
-                                    <div
-                                        style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
-                                        <p
-                                            style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
-                                            "기본 5% ~"
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
                                             <br>
-                                            "최대 15% 할인"
+                                            확인하기
                                         </p>
                                     </div>
                                 </div>
-                                <a class="btn btn-wishket" style="width: 100;">구매 신청 하기</a>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
                             </div>
                         </div>
+
+                        <div class="store-list-box">
+                            <div style="float:left; width: 165px;">
+                                <a>
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
+                                </a>
+                            </div>
+                            <div class="rank-box">5</div>
+                            <div
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER5</a>
+                                <p style="margin: 3px 0 5px 0 ">
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
+                                    <span class="base-info-splitter">|</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
+                                </p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
+                                <p class="product-short-description-text lih19" style="margin-bottom: 0;">
+                                    "나를 이길자 누가 있는가"
+                                </p>
+                            </div>
+                            <div
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                <div class="width: 100%; height: 45px; position:relative;">
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div style="width: 100%; height: 80px; position:relative;">
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
+                                            <br>
+                                            확인하기
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
+                            </div>
+                        </div>
+
+                        <div class="store-list-box">
+                            <div style="float:left; width: 165px;">
+                                <a>
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
+                                </a>
+                            </div>
+                            <div class="rank-box">6</div>
+                            <div
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER6</a>
+                                <p style="margin: 3px 0 5px 0 ">
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
+                                    <span class="base-info-splitter">|</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
+                                </p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
+                                <p class="product-short-description-text lih19" style="margin-bottom: 0;">
+                                    "나를 이길자 누가 있는가"
+                                </p>
+                            </div>
+                            <div
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                <div class="width: 100%; height: 45px; position:relative;">
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div style="width: 100%; height: 80px; position:relative;">
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
+                                            <br>
+                                            확인하기
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
+                            </div>
+                        </div>
+
+                        <div class="store-list-box">
+                            <div style="float:left; width: 165px;">
+                                <a>
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
+                                </a>
+                            </div>
+                            <div class="rank-box">7</div>
+                            <div
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER7</a>
+                                <p style="margin: 3px 0 5px 0 ">
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
+                                    <span class="base-info-splitter">|</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
+                                </p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
+                                <p class="product-short-description-text lih19" style="margin-bottom: 0;">
+                                    "나를 이길자 누가 있는가"
+                                </p>
+                            </div>
+                            <div
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                <div class="width: 100%; height: 45px; position:relative;">
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div style="width: 100%; height: 80px; position:relative;">
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
+                                            <br>
+                                            확인하기
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
+                            </div>
+                        </div>
+
+                        <div class="store-list-box">
+                            <div style="float:left; width: 165px;">
+                                <a>
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
+                                </a>
+                            </div>
+                            <div class="rank-box">8</div>
+                            <div
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER8</a>
+                                <p style="margin: 3px 0 5px 0 ">
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
+                                    <span class="base-info-splitter">|</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
+                                </p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
+                                <p class="product-short-description-text lih19" style="margin-bottom: 0;">
+                                    "나를 이길자 누가 있는가"
+                                </p>
+                            </div>
+                            <div
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                <div class="width: 100%; height: 45px; position:relative;">
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div style="width: 100%; height: 80px; position:relative;">
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
+                                            <br>
+                                            확인하기
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
+                            </div>
+                        </div>
+
+                        <div class="store-list-box">
+                            <div style="float:left; width: 165px;">
+                                <a>
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
+                                </a>
+                            </div>
+                            <div class="rank-box">9</div>
+                            <div
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER9</a>
+                                <p style="margin: 3px 0 5px 0 ">
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
+                                    <span class="base-info-splitter">|</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
+                                </p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
+                                <p class="product-short-description-text lih19" style="margin-bottom: 0;">
+                                    "나를 이길자 누가 있는가"
+                                </p>
+                            </div>
+                            <div
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                <div class="width: 100%; height: 45px; position:relative;">
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div style="width: 100%; height: 80px; position:relative;">
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
+                                            <br>
+                                            확인하기
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
+                            </div>
+                        </div>
+
+                        <div class="store-list-box">
+                            <div style="float:left; width: 165px;">
+                                <a>
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
+                                </a>
+                            </div>
+                            <div class="rank-box">10</div>
+                            <div
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER10</a>
+                                <p style="margin: 3px 0 5px 0 ">
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
+                                    <span class="base-info-splitter">|</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
+                                </p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
+                                <p class="product-short-description-text lih19" style="margin-bottom: 0;">
+                                    "나를 이길자 누가 있는가"
+                                </p>
+                            </div>
+                            <div
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                <div class="width: 100%; height: 45px; position:relative;">
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div style="width: 100%; height: 80px; position:relative;">
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
+                                            <br>
+                                            확인하기
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
+                            </div>
+                        </div>
+
+                        <div class="store-list-box">
+                            <div style="float:left; width: 165px;">
+                                <a>
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
+                                </a>
+                            </div>
+                            <div class="rank-box">11</div>
+                            <div
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER11</a>
+                                <p style="margin: 3px 0 5px 0 ">
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
+                                    <span class="base-info-splitter">|</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
+                                </p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
+                                <p class="product-short-description-text lih19" style="margin-bottom: 0;">
+                                    "나를 이길자 누가 있는가"
+                                </p>
+                            </div>
+                            <div
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                <div class="width: 100%; height: 45px; position:relative;">
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div style="width: 100%; height: 80px; position:relative;">
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
+                                            <br>
+                                            확인하기
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
+                            </div>
+                        </div>
+
+                        <div class="store-list-box">
+                            <div style="float:left; width: 165px;">
+                                <a>
+                                    <img src="../img/person.png" style="width: 163px; height: 163px;">
+                                </a>
+                            </div>
+                            <div class="rank-box">12</div>
+                            <div
+                                    style="float:left; width: 655px; padding-left: 20px; padding-right: 20px; padding-top: 17px;">
+                                <a class="product-name-link lih18" >USER12</a>
+                                <p style="margin: 3px 0 5px 0 ">
+                                    <span class="product-category">제출 : </span>
+                                    <span class="product-category">200</span>
+                                    <span class="base-info-splitter">|</span>
+                                    <span class="product-alliance">맞은 문제 : </span>
+                                    <span class="product-alliance">200</span>
+                                </p>
+                                <p class="product-description-text">정답 비율 : 100%</p>
+                                <p class="product-short-description-text lih19" style="margin-bottom: 0;">
+                                    "나를 이길자 누가 있는가"
+                                </p>
+                            </div>
+                            <div
+                                    style="float:right; height: 205px; margin-top: -20px; margin-bottom: -20px; margin-right: -20px; width: 190px; padding: 20px; border-left: 2px dashed #dedede; position: relative;">
+                                <div class="width: 100%; height: 45px; position:relative;">
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div style="width: 100%; height: 80px; position:relative;">
+                                    <div style="position:absolute; top: 2px; height: 40px; display: table; width: 100%;">
+                                        <p style="line-height: 1.6; display: table-cell; vertical-align: middle; text-align: left; width: 100%; font-size: 16px; font-weight: bold; color: #454545;">
+                                            유저 정보
+                                            <br>
+                                            확인하기
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="btn btn-wishket" style="width: 100%;" href="#wrap">목록보기</a>
+                            </div>
+                        </div>
+
 
                         <div class="pagination-wrapper" style="clear: both;">
                             <ul class="pagination">
                                 <li class="active">
                                     <span class="current">1</span>
+                                </li>
+                                <li>
+                                    <a>2</a>
+                                </li>
+                                <li>
+                                    <a class="next">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -278,6 +556,9 @@
         </div>
     </div>
 
+    <div id="footer"></div>
 </body>
+
+
 
 </html>

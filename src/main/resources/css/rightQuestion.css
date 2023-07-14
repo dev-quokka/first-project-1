@@ -100,11 +100,11 @@ a:hover {
     font-size: 24px;
     font-weight: bold;
     line-height: 24px;
-    color: #555;
+    color: #5882FA;
     margin-top: 0;
     margin-bottom: 10px;
     font-family: inherit;
-    text-rendering: optimizelegibility; 
+    text-rendering: optimizelegibility;
 }
 
 .store-small-text {
@@ -191,19 +191,19 @@ img {
     cursor: pointer;
     background-color: #f7f7f7;
     color: #666;
-    
-} 
+
+}
 .store-category-nav li {
     cursor: inherit;
     display: block;
     height: 42px;
-    font-size: 13px;  
+    font-size: 13px;
     line-height: 23px;
     background-color: #fafafa;
     border-bottom: solid 2px #2099bb;
     color: #535353;
     float: left;
-    
+
 }
 
 .store-category-nav .active-li a {
@@ -273,39 +273,21 @@ img {
     box-shadow: 0 1px 0 0 #dedede;
     background-color: #fff;
     border: 1px solid #dedede;
-    position: relative;
 }
 
 .store-list-box .product-name-link {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color: #2099bb;
     margin-bottom: 9px;
     text-decoration: none;
 }
 
-.rank-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: #EB3F3F;
-    border-radius: 0% 0% 50% 0%;
-    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
 .lih18 {
     line-height: 18px;
 }
 
-.lowest-price-img {   
+.lowest-price-img {
     display: inline-block;
     position: relative;
     width: 40px;

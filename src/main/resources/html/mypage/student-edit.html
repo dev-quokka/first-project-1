@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name='Viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0'>
+    <title>프로필 수정(학생)</title>
+    
+	<!-- 스타일 -->
+	<link rel='stylesheet' href='/src/main/resources/css/quizlist/reset.css' type='text/css'>
+	<link rel='stylesheet' href='/src/main/resources/css/quizlist/fonts.css' type='text/css'>
+	<link rel='stylesheet' href='/src/main/resources/css/mypage/student-edit.css' type='text/css'>
+
+	<!-- js라이브러리 -->
+	<script src='/src/main/resources/js/quizlist/jquery-1.12.4.min.js'></script>
+	<script src='/src/main/resources/js/quizlist/jquery.easing.1.3.js'></script>
+	<script src='/src/main/resources/js/quizlist/jquery.touchSwipe.js'></script>
+
+	<!-- 각 브라우저 CSS호환 -->
+	<script src='/src/main/resources/js/quizlist/prefixfree.min.js'></script>
+
+</head>
+
+<script>
+    $(document).ready(function(){
+        setDateBox();
+    });    
+ 
+    // select box 연도 , 월, 일 표시
+    function setDateBox(){
+        var dt = new Date();
+        var year = "";
+        var com_year = dt.getFullYear();
+        // 연도 뿌려주기
+        $("#YEAR").append("<option value=''>년도</option>");
+        
+        for(var y = (com_year-30); y <= (com_year+0); y++){
+            $("#YEAR").append("<option value='"+ y +"'>"+ y + " 년" +"</option>");
+        }
+        // 월 뿌려주기
+        var month;
+        $("#MONTH").append("<option value=''>월</option>");
+        for(var i = 1; i <= 12; i++){
+            $("#MONTH").append("<option value='"+ i +"'>"+ i + " 월" +"</option>");
+        }
+        // 일 뿌려주기
+        var day;
+        $("#DAY").append("<option value=''>일</option>");
+        for(var i = 1; i <= 31; i++){
+            $("#DAY").append("<option value='"+ i +"'>"+ i + " 일" +"</option>");
+        }
+    }
+ 
+</script>
+
+<body>
+    
+<div id="wrap">
+
+    <header id="header">
+        <div class="wrap">
+            <div class="gap">
+                <div class="container">
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        
+        <section id="section">
+            <div class="wrap">
+                <div class="gap">
+                    <div class="container">
+
+                        <div class="title_wrap"></div>
+                        
+                        <div class="content_wrap clearfix">
+
+                            <div class="content_body">
+                                <div class="profiles-body">
+                                    <div class="profile-img">
+                                        <img class="user-img"  src="/src/main/resources/img/mypage/profile.jpg">
+
+                                        <a  class="edit-icon" href="" style="float: right;">
+                                            <img class="edit-img" src="/src/main/resources/img/mypage/icon_edit.png" >
+                                        </a>
+                                        
+                                        
+                                    </div>
+
+                                    <div class="profile-title">
+                                        <span class="user-name">송파구 물주먹</span>
+
+                                        <span class="join-date">회원가입일 2023.07.10</span>
+                                    </div>
+
+                                    <div class="profile-subtitle">
+                                        <div class="icon-student">
+                                            <img class="icon-img" src="/src/main/resources/img/mypage/student-icon.png">
+                                            학생
+                                        </div>
+
+                                        <div class="icon-divider"></div>
+
+                                        <div class="icon-grade">
+                                            <img class="icon-img" src="/src/main/resources/img/mypage/grade-icon.png">
+                                            3학년
+                                        </div>
+
+                                        <div class="icon-divider"></div>
+
+                                        <div class="icon-student">
+                                            방산고등학교
+                                        </div>
+
+                                        <div class="icon-divider"></div>
+
+                                        <div class="icon-ranking">
+                                            <img class="icon-img" src="/src/main/resources/img/mypage/ranking-icon.jpg">
+                                            랭킹 1위
+                                        </div>
+
+                                        <div class="header-button">
+                                            <a href="/src/main/resources/html/mypage/student-mypage.html" onclick="alert('수정이 완료되었습니다.')" style="outline: none;">
+                                                <div class="header-btn">
+                                                    업데이트
+                                                </div>
+                                            </a>
+
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>      
+                            </div>
+
+                            <div class="list">
+
+                                <div class="left-menu">
+
+                                    <a href="" style="outline: none;">
+                                        <div class="menu active">프로필 수정</div>
+                                    </a>
+
+                                    <div class="divider"></div>
+
+                                    <a href="" style="outline: none;">
+                                        <div class="answer">내가 푼 문제</div>
+                                    </a>
+
+                                    <a href="" style="outline: none;">
+                                        <div class="answer">맞힌 문제</div>
+                                    </a>
+
+                                    <a href="" style="outline: none;">
+                                        <div class="wrong-answer">틀린 문제</div>
+                                    </a>
+
+                                    <div class="divider"></div>
+
+                                    <a href="" style="outline: none;">
+                                        <div class="question">내질문</div>
+                                    </a>
+
+                                    <div class="divider"></div>
+
+                                    <a href="" style="outline: none;">
+                                        <div class="question">질문하기</div>
+                                    </a>
+
+
+
+
+                                </div>
+
+                                <div class="edit-title">
+                                        <h1>프로필 수정</h1>
+                                        <h2>프로필을 수정할 수 있습니다.</h2>
+                                </div>
+
+
+                                <div class="edit-body">
+                                 <div class="edit-body-form">
+                                    <div class="form-group">
+                                        <label class="edit-label">
+                                            이름
+                                            <span>*</span>
+                                        </label>
+                                        <div class="control-wrapper">
+                                            <input type="text" class="edit-text">
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="edit-label">
+                                            별명
+                                        </label>
+                                        <div class="control-wrapper">
+                                            <input type="text" class="edit-text">
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="edit-label">
+                                            생년월일
+                                            <span>*</span>
+                                        </label>
+                                        <div class="control-wrapper">
+                                            <select class="date-select2" name="DAY" id="DAY" title="일"></select>
+
+                                            <select class="date-select" name="MONTH" id="MONTH" title="월"></select>
+
+                                            <select class="date-select" name="YEAR" id="YEAR" title="년도"></select>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="edit-label">
+                                            학년
+                                            <span>*</span>
+                                        </label>
+                                        <div class="control-wrapper">
+                                            <select class="edit-select" name="" id="" >
+                                                <option value="">학년</option>
+                                                <option value="one">1학년</option>
+                                                <option value="two">2학년</option>
+                                                <option value="three">3학년</option>
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="edit-label">
+                                            학교
+                                            <span>*</span>
+                                        </label>
+                                        <div class="control-wrapper">
+                                            <input type="text" class="edit-text">
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="edit-label">
+                                            전화번호
+                                            <span>*</span>
+                                        </label>
+                                        <div class="control-wrapper">
+                                            <input type="text" class="edit-text">
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="edit-label">
+                                            이메일
+                                        </label>
+                                        <div class="control-wrapper">
+                                            <input type="text" class="edit-text">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    
+                                </div>
+
+                                
+
+                            </div>
+
+                            
+
+                            
+
+                            
+
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="wrap">
+            <div class="gap">
+                <div class="container">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

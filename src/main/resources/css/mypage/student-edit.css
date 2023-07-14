@@ -1,0 +1,82 @@
+@charset "utf-8";
+body {  background-color: #F5F5F5;}
+#wrap { width:100%; overflow: hidden; }
+
+/* 공용 스타일/////////////////////////////////////////////////////////////////////////// */
+
+.container { width:100%; }
+
+.wrap { width:100%; max-width:1110px; margin:0 auto; }
+.wrap .gap { margin:0 15px; }
+.wrap .gap .container { width:100%; }
+
+.title { width: 100%; }
+.title h2 { font-size: 14px; line-height: 24px; color: #212121; font-weight: 500;}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+#header { width: 100%; height: 64px; background-color: #000; }
+
+#main { width: 100%; height: 2287px;}
+#section { width: 100%; }
+
+.title_wrap { padding-top: 48px; padding-bottom: 20px; }
+.title_wrap h2 { font-size: 25px; line-height: 36px; display: inline-block; font-weight: 500;}
+
+.content_wrap { width: 100%;}
+.content_wrap .content_body{width: 100%; height: 144px; border: 1px solid #ddd; border-bottom: 0px; background-color: white; box-shadow: 0 2px 8px 0 rgba(0,0,0,.16); position:relative; border-radius: 12px;}
+.content_wrap .content_body .profiles-body{padding: 32px;}
+
+.content_wrap .content_body .profile-img{float: left; width: 80px; height: 80px; margin-right: 24px;}
+.content_wrap .content_body .profile-img .user-img{width: 80px; height: 80px; border-radius: 50%;}
+
+.content_wrap .content_body .profile-img .edit-icon{display: inline-block; margin-top: -26px; position: relative; outline: none;}
+
+.content_wrap .content_body .profile-title{margin-bottom: 12px;}
+.content_wrap .content_body .profile-title .user-name{font-size: 24px; color: #212121; margin-right: 20px; font-weight: 500;}
+.content_wrap .content_body .profile-title .join-date {float: right; margin-top: -4px; color: #bdbdbd; font-weight: 500;}
+
+.content_wrap .content_body .profile-subtitle {margin-bottom: 10px;}
+.content_wrap .content_body .profile-subtitle .icon-student {display: inline-block; position: relative; margin-right: 8px; color: #616161; font-size: 14px; line-height: 24px; font-weight: 400;}
+.content_wrap .content_body .profile-subtitle .icon-grade {display: inline-block; position: relative; margin-right: 8px; color: #616161; font-size: 14px; line-height: 24px; font-weight: 400;}
+.content_wrap .content_body .profile-subtitle .icon-ranking {display: inline-block; position: relative; margin-right: 8px; color: #616161; font-size: 14px; line-height: 24px; font-weight: 400;}
+
+.content_wrap .content_body .profile-subtitle .icon-img{position: relative; top: 5px; margin-right: 4px; width: 14px; height: 14px;}
+
+.content_wrap .content_body .profile-subtitle .icon-divider{width: 1px; height: 14px; display: inline-block; background-color: #bdbdbd; position: relative; top: 2px; margin-right: 8px;}
+
+.content_wrap .content_body .profile-subtitle .header-button{float: right; margin-top: 10px; outline: none;}
+.content_wrap .content_body .profile-subtitle .header-button .header-btn {text-align: center; border-radius: 4px; margin-top: -16px; padding: 11px 24px; font-size: 16px; line-height: 26px; font-weight: 400; background-color: #fff;; color: #2099bb; border: 1px solid #e0e0e0;}
+
+.content_wrap .list {margin-top: 40px;}
+
+.content_wrap .list .edit-title { padding: 30px; width: 804px; height: 52px; border: 1px solid #ddd;  background-color: white;  position:relative;  border-radius: 3px; float: right; margin-bottom: 5px;}
+.content_wrap .list .edit-title h1{font-size: 24px; color: #555555; font-weight: 500;}
+.content_wrap .list .edit-title h2{font-size: 14px; color: #999999; margin-top: 10px;}
+
+.content_wrap .list .edit-body{padding: 30px; width: 804px; height: 662px; border: 1px solid #ddd;  background-color: white;  position:relative;  border-radius: 3px; float: right;}
+
+.content_wrap .list .left-menu {float: left; width: 208px;}
+
+.content_wrap .list .left-menu .menu{ background-color: #eeeeee; color: #212121; font-weight: 500;  height: 48px; width: 184px; padding-top: 12px; padding-left: 16px; border-radius: 4px; line-height: 36px; font-size: 14px;}
+.content_wrap .list .left-menu .divider {width: 184px; height: 1px; background-color: #e0e0e0; margin-top: 8px;}
+
+.content_wrap .list .left-menu .answer{color: #616161; font-weight: 500;  height: 48px; width: 184px; padding-top: 12px; padding-left: 16px; border-radius: 4px; line-height: 36px; font-size: 14px; margin-top: 10px;}
+.content_wrap .list .left-menu .answer:hover{background-color:#eeeeee;}
+
+.content_wrap .list .left-menu .wrong-answer{color: #616161; font-weight: 500;  height: 48px; width: 184px; padding-top: 12px; padding-left: 16px; border-radius: 4px; line-height: 36px; font-size: 14px; margin-top: 10px;}
+.content_wrap .list .left-menu .wrong-answer:hover{background-color:#eeeeee;}
+
+.content_wrap .list .left-menu .question{color: #616161; font-weight: 500;  height: 48px; width: 184px; padding-top: 12px; padding-left: 16px; border-radius: 4px; line-height: 36px; font-size: 14px; margin-top: 10px;}
+.content_wrap .list .left-menu .question:hover{background-color:#eeeeee;}
+
+.content_wrap .edit-body .edit-body-form {margin-top: 60px; margin-bottom: 60px;}
+.content_wrap .edit-body .form-group{margin-left: 60px; margin-bottom: 50px; width: 500px; height: 34px;}
+.content_wrap .edit-body .control-wrapper{display: inline; margin-left: 13px;  width: 340px;}
+.content_wrap .edit-body .edit-label{font-size: 14px; color: #555; font-weight: 500; line-height: 34px; margin-left: 60px;}
+.content_wrap .edit-body .edit-label span{color: #f48023;}
+.content_wrap .edit-body .edit-text{width: 340px; height: 34px; margin-left: 20px; border: 1px solid #dedede; outline: none; padding: 6px 12px; font-size: 14px; border-radius: 2px; float: right;}
+.content_wrap .edit-body .edit-select{width: 340px; height: 34px; margin-left: 20px; border: 1px solid #dedede; outline: none; color: #666; padding: 6px 12px; font-size: 14px; border-radius: 2px; float: right;}
+.content_wrap .edit-body .date-select{width: 106px; height: 34px; margin-right: 10px; border: 1px solid #dedede; outline: none; color: #666; padding: 6px 12px; font-size: 14px; border-radius: 2px; float: right; display: inline;}
+.content_wrap .edit-body .date-select2{width: 106px; height: 34px; border: 1px solid #dedede; outline: none; color: #666; padding: 6px 12px; font-size: 14px; border-radius: 2px; float: right; display: inline;}
