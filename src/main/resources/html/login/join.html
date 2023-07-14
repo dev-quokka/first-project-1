@@ -26,10 +26,6 @@
 <body class="wishket-member-signin wishket-member vsc-initialized"><img height="1"
                                                                         src="https://www.facebook.com/tr?id=1387208918241112&amp;ev=PageView&amp;noscript=1"
                                                                         style="display:none" width="1">
-<script src="/static/renewal/js/MultiClamp.min.js" type="text/javascript"></script>
-<script src="/static/renewal/thirdparty/wishket-component/js/radiocheck.js" type="text/javascript"></script>
-<script src="/static/renewal/thirdparty/wishket-component/js/input.js" type="text/javascript"></script>
-<script src="/static/renewal/thirdparty/wishket-component/js/tooltip.js" type="text/javascript"></script>
 <div id="facebook_shade" style="display: none"></div>
 <div id="facebook_wrapper" style="display: none">
     <div id="facebook_lightbox">
@@ -86,7 +82,7 @@
                     <div class="input-box">
                         <div class="label-input-wishket"><input class="theme-wishket wishket-label-input"
                                                                 data-type="label" maxlength="33" name="password1"
-                                                                type="password"><label>비밀번호</label></div>
+                                                                type="password" autocomplete="off"><label>비밀번호</label></div>
                         <span class="error-text" style="display:none;">에러상세 메시지</span><i class="icon-eyes-group"><img
                             class="icon icon-eyes-on" src="../../img/login/icon_input_eye.png" height="16" width="16"/>
 
@@ -101,7 +97,7 @@
                     <div class="input-box">
                         <div class="label-input-wishket"><input class="theme-wishket wishket-label-input"
                                                                 data-type="label" maxlength="33" name="password2"
-                                                                type="password"><label>비밀번호 확인</label></div>
+                                                                type="password" autocomplete="off"><label>비밀번호 확인</label></div>
                         <span class="error-text" style="display:none;">에러상세 메시지</span><i class="icon-eyes-group"><img
                             class="icon icon-eyes-on" src="../../img/login/icon_input_eye.png" height="16" width="16"/>
 
@@ -174,46 +170,13 @@
         src="https://analytics.twitter.com/i/adsct?bci=3&amp;eci=2&amp;event_id=d595e035-53a6-4331-b65f-cb3650fd6823&amp;events=%5B%5B%22pageview%22%2C%7B%7D%5D%5D&amp;integration=advertiser&amp;p_id=Twitter&amp;p_user_id=0&amp;pl_id=0ba3aa75-7e10-4e61-a57b-74b035b7939f&amp;tw_document_href=https%3A%2F%2Faccount.wishket.com%2Fwishket-member%2Fsignup%2F%3Fnext%3D%2F&amp;tw_iframe_status=0&amp;tw_order_quantity=0&amp;tw_sale_amount=0&amp;txn_id=o88y4&amp;type=javascript&amp;version=2.3.29"
         height="1" width="1" style="display: none;">
 </body>
+
+
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script type="text/javascript">
     if (typeof Promise !== 'function') {
         document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"><\/script>');
     }
-</script>
-<script>
-    $(document).ready(function () {
-        // 위시켓 컴포넌트 시작
-        $('.wishket-text').uiInput();
-        $('.wishket-label-input').uiInput();
-        $('.wishket-checkbox').uiRadioCheck();
-        // 위시켓 컴포넌트 끝
-        $('.subscription-request-email').keydown(function (event) {
-            if (event.keyCode == 13) {
-                event.preventDefault();
-                $(this).siblings('button[data-type="newsletter_request"]').click();
-                return false;
-            }
-        });
-        $('body').on('click', function (e) {
-            const $serviceList = $('#serviceList');
-            if (!$serviceList.has(e.target).length) {
-                $serviceList.removeClass('active');
-            }
-        });
-    });
-    $(document).on('click', '.message-close-icon', function () {
-        $('.message-box').remove();
-    });
-
-    function openServiceList() {
-        const $serviceList = $('#serviceList');
-        if ($serviceList.hasClass('active')) {
-            $serviceList.removeClass('active');
-        } else {
-            $serviceList.addClass('active');
-        }
-    }
-
 </script>
 <script>
     $(document).on('click', '.icon-eyes-on, .icon-eyes-off', function (e) {
@@ -232,102 +195,176 @@
     });
 </script>
 <script>
-    function social_login_popup(backend_name, backend_name_display) {
-        // facebook popup창 위치 조정
-        var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : window.screenX;
-        var dualScreenTop = window.screenTop != undefined ? window.screenTop : window.screenY;
-        var width = document.body.offsetWidth;
-        var height = document.body.offsetHeight;
-        var popup_width = 600;
-        var popup_height = 650;
-        var left = (width / 2) - (popup_width / 2) + dualScreenLeft;
-        var top = (height / 2) - (popup_height / 2) + dualScreenTop;
-
-        // social login popup창 open
-        const url = (backend_name === 'facebook') ? '/wishket-member/login/facebook/' : '/wishket-member/login/google-oauth2/';
-        var popupWin = window.open(url, '_blank',
-            'location=no,width=' + popup_width + ',height=' + popup_height + ',top=' + top + ',left=' + left + ',' +
-            'scrollbars=yes,status=no');
-        social_login_background('block', backend_name_display);
-
-        popupInterval = window.setInterval(function () {
-            try {
-                // 창이 꺼졌는지 판단
-                if (popupWin == null || popupWin.closed) {
-                    window.clearInterval(popupInterval);
-                    popupWin = null;
-                    if (!(document.getElementById('facebook_alert_message').innerHTML)) {
-                        social_login_close();
-                    }
-                }
-            } catch (e) {
-            }
-        }, 500);
-    }
-
-    // facebook message 창 block
-    function social_login_background(display, backend_display) {
-        const facebook_shade = document.getElementById('facebook_shade');
-        const facebook_wrapper = document.getElementById('facebook_wrapper');
-        const backend_name = document.getElementById('backend_name');
-        backend_name.innerHTML = backend_display
-        facebook_shade.style.display = display;
-        facebook_wrapper.style.display = display;
-    }
-
-    // 상황별 social login message 창 멘트 변경
-    function social_login_change_message() {
-        var facebook_message_box = document.getElementById('facebook_message_box');
-        var facebook_alert_message = document.getElementById('facebook_alert_message').innerHTML;
-        var facebook_close = document.getElementById('facebook_close');
-        facebook_close.style.display = 'block';
-        facebook_message_box.innerHTML = facebook_alert_message;
-    }
-
-    // social login message 창 닫기
-    function social_login_close() {
-        var lastHref = window.location.href;
-        window.open(lastHref, '_self', '');
-    }
-
-    function social_logout() {
-        const lastHref = window.location.href;
-        var next_url = "";
-        if (lastHref.indexOf("?next=") !== -1) {
-            next_url = "?next=" + lastHref.split("?next=")[1];
+    let isBlockDoubleClick = false;
+    $(document).ready(function () {
+        if ('' === 'True') {
+            showInvalid($('input[name="email"]').parent());
         }
-        location.href = '/wishket-member/logout/?next=/wishket-member/login/' + next_url;
-    }
-
-    function deleteProject() {
-        $.ajax({
-            url: '/wishket-member/api/remove-temporary-project/',
-            method: 'GET',
-            success: function () {
-                social_login_close();
+        if ('' === 'True') {
+            showInvalid($('input[name="username"]').parent());
+        }
+        $('input[name="tos"]').on('change', function () {
+            $(this).closest('.input-box').find('.error-text-custom').hide();
+        });
+        $('input').on('keyup', function (e) {
+            if (e.keyCode == 13 && !isBlockDoubleClick) {
+                $('#submitBtn').click();
             }
         });
+        $('#submitBtn').on('click', function (e) {
+                e.preventDefault();
+                isBlockDoubleClick = true;
+                if (validCheck()) {
+                    $('#submitBtn').attr('disabled', true);
+                    $('#wishketSignForm').submit();
+                } else {
+                    isBlockDoubleClick = false;
+                }
+            },
+        );
+    })
+
+    // 이메일 유효검사
+    function isValidEmail(target) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(target.trim());
     }
-</script>
 
-<script>
-    $(document).ready(function () {
-        $('.wishket-tooltip').uiTooltip({position: 'bottomright', width: '389px'});
-    });
-</script>
-
-
-<script>
-    var h = document.querySelector("label-input-wishket");
-    h.addEventListener("click", hclick);
-
-    function hclick() {
-        console.log("dd");
-        if(title.classList.contains('label-effect')){
-            title.classList.remove('label-effect');
-        } else {
-            title.classList.add('label-effect');
+    function isValidUsername(target) {
+        if ($(document).find('title').text().indexOf("로그인") === -1) {
+            const re = /\W/;
+            return re.test(target.trim());
         }
+        return false
     }
+
+    function validCheck() {
+        const inputArray = $('form').find('input');
+        let invalidList = [];
+        let invalidPassword = [];
+
+        inputArray.map(function (idx, e) {
+            const $target = $(e);
+            const $targetName = $target.attr('name');
+            const inputType = $target.attr('type');
+            const inputVal = $target.val();
+            const $errorText = $target.parent().siblings('.error-text-custom');
+            if (inputType === 'text' || inputType === 'password') {
+                if (inputVal.length <= 0 || ($targetName === 'username' && (isValidUsername(inputVal) || inputVal.length < 6 || inputVal.indexOf(" ") !== -1))) {
+                    invalidList.push($targetName);
+                    if ($targetName === 'email') {
+                        $errorText.html('이메일을 입력해 주세요.');
+                    } else if ($targetName === 'username') {
+                        const msg = (inputVal.length === 0) ? '아이디를 입력해 주세요.' : '6글자 이상의 영문자, 숫자, 특수기호(_)만 사용 가능합니다.';
+                        $errorText.html(msg);
+                    }
+                } else if ($targetName === 'email' && !isValidEmail(inputVal)) {
+                    invalidList.push($targetName);
+                    $errorText.html('이메일 형식이 올바르지 않습니다.');
+                } else if ($targetName === 'password1' || $targetName === 'password') {
+                    if (inputVal.length < 8) {
+                        invalidPassword.push($targetName);
+                    }
+                }
+            } else if (inputType === 'checkbox') {
+                if ($targetName === 'tos') {
+                    if (!$target.prop('checked')) {
+                        invalidList.push($targetName);
+                    }
+                }
+            }
+        });
+
+        if ($('form').find('input[name="password2"]').length > 0) {
+            if ($('input[name="password1"]').val() !== $('input[name="password2"]').val()) {
+                invalidPassword.push("password2");
+            }
+        }
+
+        invalidList.map(function (e) {
+            const $target = $('input[name="' + e + '"]');
+            if ($target.attr('type') === 'checkbox') {
+                const $targetParent = $target.closest('.checkbox-wishket');
+                $targetParent.siblings('.error-text-custom').show();
+            } else {
+                showInvalid($target.parent());
+            }
+        });
+        invalidPassword.map(function (e) {
+            const $target = $('input[name="' + e + '"]');
+            const $targetParent = $target.parent();
+            const $errorText = $targetParent.siblings('.error-text');
+            if ($target.attr('name') !== 'password2') {
+                $errorText.html('8글자 이상 입력해 주세요. (입력하신 내용은 ' + $target.val().length + '글자입니다.)');
+            } else {
+                $errorText.html('동일한 비밀번호를 입력해 주세요.');
+            }
+            $errorText.css('display', 'block');
+            $targetParent.addClass('error');
+        });
+
+        return invalidList.length == 0 && invalidPassword.length == 0
+    }
+
+    function showInvalid($targetParent) {
+        const $errorText = $targetParent.siblings('.error-text');
+        $targetParent.addClass('error');
+        $errorText.html($targetParent.siblings('.error-text-custom').html());
+        $errorText.css('display', 'block');
+    }
+
+
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.label-input-wishket').click(function() {
+            var input = $(this).find('theme-wishket');
+
+            // 입력값이 있는 경우 'label-effect' 유지
+            if (input.val().trim() !== '') {
+                $(this).addClass('label-effect');
+            }
+        });
+
+        // 입력값이 있는 경우 'label-effect' 클래스 계속 추가 (유지시켜줌)
+        $('.label-input-wishket input').on('input', function() {
+            var input = $(this);
+            var container = input.parent();
+
+            if (input.val().trim() !== '') {
+                container.addClass('label-effect');
+            } else {
+                container.removeClass('label-effect');
+            }
+        });
+
+        // 입력값이 있는 경우 'label-effect' 클래스 추가
+        $('.label-input-wishket input').each(function() {
+            var input = $(this);
+            var container = input.parent();
+
+            if (input.val().trim() !== '') {
+                container.addClass('label-effect');
+            }
+        });
+
+        // 다른 곳 클릭 시 'label-effect' 클래스 제거
+        $(document).click(function(e) {
+            var target = e.target;
+            var containers = $('.label-input-wishket');
+
+            if (!$(target).is(containers) && !$(target).closest(containers).length) {
+                containers.each(function() {
+                    var input = $(this).find('input');
+                    var container = $(this);
+
+                    if (input.val().trim() === '') {
+                        container.removeClass('label-effect');
+                    }
+                });
+            }
+        });
+    });
 </script>
 </html>

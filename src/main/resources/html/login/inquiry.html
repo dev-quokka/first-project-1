@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/login/inquiry.css">
+
+</head>
+<body style="margin: 0;" class="vsc-initialized">
+<div class="introduction-inner noto-regular">
+
+    <section>
+        <div class="consulting">
+
+
+            <a name="submitform"></a>
+            <div class="consulting-explain-7" id="consulting-submit-form">
+                <div class="consulting-div">
+                    <div class="pt60 mb50 mb15"><p class="consulting-title noto-light text-al mb15">문의하기</p></div>
+                    <div class="consulting-request-box"><p class="consulting-call-title noto-bold mt57 mb15">아래 번호로 전화
+                        주시면 위시켓 매니저에게 바로 상담받으실 수 있습니다.</p>
+                        <p class="consulting-call-sub mt0 mb10"><img class="call-img"
+                                                                     src="../../img/login/call (1).png"
+                                                                     height="34" width="33">02-6925-4842
+                        </p>
+                        <p class="consulting-call-text mt10 mb45">상담 시간 : 평일 오전 10시부터 오후 6시 (공휴일 제외)</p>
+                        <div class="reservation-box"><p class="reservation-title mb0 pt48">문의 등록하기</p>
+                            <p class="reservation-sub mt10 mb13">연락처와 희망 상담 시간을 남겨 주시면 위시켓 매니저가 연락드리겠습니다.</p>
+                            <form action="/unity_bill/" class="form-horizontal" enctype="multipart/form-data"
+                                  id="submit-res" method="POST" onsubmit="return radio_check()"><input
+                                    name="csrfmiddlewaretoken" type="hidden"
+                                    value="F4epql1KTOSkigzTBClwLodEUbtznBtlyl24DUiPK9H4J5h6RKl6cov0tfTCYBSq">
+                                <div class="fl mt30 pl5">
+
+                                    <div class="consulting-form-group"><label class="consulting-label"><span>*</span>문의 제목</label><input class="consulting-input-box" name="email" required="required"
+                                                          type="text"></div>
+
+                                    <div class="consulting-form-group" style="margin-bottom: 10px"><label class="consulting-label" ><span>*</span>문의 내용</label>
+                                        <textarea
+                                                style="height:50px; width: 412px"
+                                        ></textarea></div>
+                                    <div class="consulting-form-group text-al ml108 mt23">
+                                        <div><input class="consulting-radio" id="agree-radio" type="checkbox"><input
+                                                id="agree-value" name="agree_personal_info" type="hidden"
+                                                value=""><label class="consulting-label">개인정보 제공에 동의합니다.</label><a
+                                                class="consulting-link" href="/privacy" target="_blank">자세히 보기 &gt;</a>
+                                        </div>
+                                        <div class="consulting-caution mt5"></div>
+                                        <div class="mt50" id="reserve-box"><input
+                                                class="consulting-btn consulting-btn-value-font consulting-last-btn noto-bold"
+                                                name="request" type="submit" value="상담 신청하기"></div>
+                                    </div>
+                                </div>
+                            </form>
+                            <img class="pl11 pt25" src="../../img/login/reservation.png" height="228" width="255"><input
+                                    id="save-success" type="hidden" value="">
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div style="clear:both;"></div>
+    </section>
+
+</div>
+
+</body>
+</html>
