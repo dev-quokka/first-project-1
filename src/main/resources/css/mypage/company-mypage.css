@@ -1,0 +1,103 @@
+@charset "utf-8";
+body {  background-color: #F5F5F5;}
+#wrap { width:100%; overflow: hidden; }
+
+/* 공용 스타일/////////////////////////////////////////////////////////////////////////// */
+
+.container { width:100%; }
+
+.wrap { width:100%; max-width:1110px; margin:0 auto; }
+.wrap .gap { margin:0 15px; }
+.wrap .gap .container { width:100%; }
+
+.title { width: 100%; }
+.title h2 { font-size: 14px; line-height: 24px; color: #212121; font-weight: 500;}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+#header { width: 100%; height: 64px; background-color: #000; }
+
+#main { width: 100%; height: 2287px;}
+#section { width: 100%; }
+
+.title_wrap { padding-top: 48px; padding-bottom: 20px; }
+.title_wrap h2 { font-size: 25px; line-height: 36px; display: inline-block; font-weight: 500;}
+
+.content_wrap { width: 100%;}
+.content_wrap .content_body{width: 100%; height: 144px; border: 1px solid #ddd; border-bottom: 0px; background-color: white; box-shadow: 0 2px 8px 0 rgba(0,0,0,.16); position:relative; border-radius: 12px;}
+.content_wrap .content_body .profiles-body{padding: 32px;}
+
+.content_wrap .content_body .profile-img{float: left; width: 80px; height: 80px; margin-right: 24px;}
+.content_wrap .content_body .profile-img .company-img{width: 80px; height: 80px; border-radius: 50%;}
+
+.content_wrap .content_body .profile-title{margin-bottom: 12px;}
+.content_wrap .content_body .profile-title .company-name{font-size: 24px; color: #212121; margin-right: 20px; font-weight: 500;}
+.content_wrap .content_body .profile-title .join-date {float: right; margin-top: -4px; color: #bdbdbd; font-weight: 500;}
+
+.content_wrap .content_body .profile-subtitle {margin-bottom: 10px;}
+.content_wrap .content_body .profile-subtitle .icon-company {display: inline-block; position: relative; margin-right: 8px; color: #616161; font-size: 14px; line-height: 24px; font-weight: 400;}
+.content_wrap .content_body .profile-subtitle .icon-grade {display: inline-block; position: relative; margin-right: 8px; color: #616161; font-size: 14px; line-height: 24px; font-weight: 400;}
+
+.content_wrap .content_body .profile-subtitle .icon-img{position: relative; top: 5px; margin-right: 4px; width: 14px; height: 14px;}
+
+.content_wrap .content_body .profile-subtitle .icon-divider{width: 1px; height: 14px; display: inline-block; background-color: #bdbdbd; position: relative; top: 2px; margin-right: 8px;}
+
+.content_wrap .content_body .profile-subtitle .header-button{float: right; margin-top: 10px; outline: none;}
+.content_wrap .content_body .profile-subtitle .header-button .header-btn {text-align: center; border-radius: 4px; margin-top: -16px; padding: 11px 24px; font-size: 16px; line-height: 26px; font-weight: 400; background-color: #fff;; color: #2099bb; border: 1px solid #e0e0e0;}
+
+.content_wrap .list {margin-top: 40px;}
+
+.content_wrap .list .list-body{width: 80%; height: 1108px; border: 1px solid #ddd; border-bottom: 0px; background-color: white; box-shadow: 0 2px 8px 0 rgba(0,0,0,.16); position:relative;  border-radius: 4px; float: right;}
+.content_wrap .list .list-body .list-menu-title{border-bottom: solid 1px #e0e0e0; font-size: 24px; line-height: 36px; font-weight: 400; height: 88px; color: #212121;}
+.content_wrap .list .list-body .list-menu-title .list-menu-title-box{padding: 26px 32px;}
+
+.content_wrap .list .left-menu {float: left; width: 208px;}
+.content_wrap .list .list-menu-body{height: 915px;}
+
+.content_wrap .list-menu-body .list-menu-info {height: 182px; border-bottom: solid 1px #e0e0e0; background: white;}
+.content_wrap .list-menu-body .list-menu-info:hover {background: #F5F5F5;}
+
+.content_wrap .list-menu-body .list-menu-info .list-menu-label{padding-top: 20px; padding-left: 30px;}
+
+.content_wrap .subject-mark-1 {background-color: #00a878; border: 1px solid #00a878; color: #fff; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .subject-mark-2 {background-color: #00a878; border: 1px solid #00a878; color: #fff; width: 60px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .title-mark-test {background-color: #3ba3c7; border: 1px solid #3ba3c7; color: #fff; width: 60px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .title-mark-school {background-color: #ff7f00; border: 1px solid #ff7f00; color: #fff; width: 60px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+
+.content_wrap .list-menu-body .list-menu-info .content-bottom-label {padding-top: 20px; padding-left: 30px;}
+.content_wrap .list-menu-body .list-menu-info .list-menu-heading {padding-left: 30px;}
+.content_wrap .list-menu-body .list-menu-info .list-menu-heading-title {margin-top: 12px; font-size: 18px; color: #212121; font-weight: 500;}
+.content_wrap .list-menu-body .list-menu-info .list-menu-heading-title:hover {color: #2099bb;}
+
+.content_wrap .list-menu-body .list-menu-bottom-info {margin-left: 30px; margin-top: 20px;}
+.content_wrap .list-menu-body .list-menu-bottom-info .list-menu-bottom-detail .list-menu-bottom-detail-body {margin-bottom: 10px; color: #313131;}
+.content_wrap .list-menu-body .list-menu-bottom-info .list-menu-bottom-detail .list-menu-bottom-detail-body span {font-size: 15px;  color: #313131; }
+.content_wrap .list-menu-body .list-menu-bottom-line {margin-left: 30px; margin-right: 30px; margin-top: 20px; border-top: 1px solid #d3d3d3; }
+
+.content_wrap .list-menu-body .list-menu-bottom-info-tag {margin-top: 12px; margin-left: 30px; }
+.content_wrap .list-menu-body .list-menu-bottom-info-tag .list-menu_class-mark-1 {background-color: #fff9e0; border: 1px solid #f28a05; color: #f28a05; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .list-menu-body .list-menu-bottom-info-tag .list-menu_class-mark-2 {background-color: #dcedc8; border: 1px solid #009000; color: #008000; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .list-menu-body .list-menu-bottom-info-tag .list-menu_class-mark-3 {background-color: #ffdcdc; border: 1px solid #b24a4a; color: #b24a4a; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+.content_wrap .list-menu-body .list-menu-bottom-info-tag .list-menu_class-mark_subject-detail-mark {margin-left: 10px; background-color: #e8faff; border: 1px solid #369cc2; color: #369cc2; width: 53px; height: 21px; display: inline-block; text-align : center; line-height: 21px;}
+
+.content_wrap .list-menu-body .pagination {width: 100%; height: 105px; text-align: center; line-height: 105px;}
+.content_wrap .list-menu-body .pagination li{display: inline-block; cursor: pointer;}
+.content_wrap .list-menu-body .page-link.active{ color: #3ba3c7; font-size: 14px; text-align: center; line-height: 30px; min-width: 32px; border: 1px solid #d3d3d3; border-radius: 2px; outline: none;}
+
+.content_wrap .list-menu-body .page-link{position: relative; display: block; font-size: 14px; line-height: 30px; min-width: 32px; text-align: center; font-weight: 500; color: #616161; text-decoration: none; border: 1px solid transparent; outline: none;}
+.content_wrap .list-menu-body .page-link:hover {color: #3ba3c7;}
+
+.content_wrap .list-menu-body .page-link .img-concert{height: 30px; width: 32px;}
+
+.content_wrap .list .left-menu .menu{ background-color: #eeeeee; color: #212121; font-weight: 500;  height: 48px; width: 184px; padding-top: 12px; padding-left: 16px; border-radius: 4px; line-height: 36px; font-size: 14px;}
+.content_wrap .list .left-menu .divider {width: 184px; height: 1px; background-color: #e0e0e0; margin-top: 8px;}
+
+.content_wrap .list .left-menu .answer{color: #616161; font-weight: 500;  height: 48px; width: 184px; padding-top: 12px; padding-left: 16px; border-radius: 4px; line-height: 36px; font-size: 14px; margin-top: 10px;}
+.content_wrap .list .left-menu .answer:hover{background-color:#eeeeee;}
+
+.content_wrap .list .left-menu .wrong-answer{color: #616161; font-weight: 500;  height: 48px; width: 184px; padding-top: 12px; padding-left: 16px; border-radius: 4px; line-height: 36px; font-size: 14px; margin-top: 10px;}
+.content_wrap .list .left-menu .wrong-answer:hover{background-color:#eeeeee;}
+
+.content_wrap .list .left-menu .question{color: #616161; font-weight: 500;  height: 48px; width: 184px; padding-top: 12px; padding-left: 16px; border-radius: 4px; line-height: 36px; font-size: 14px; margin-top: 10px;}
+.content_wrap .list .left-menu .question:hover{background-color:#eeeeee;}
