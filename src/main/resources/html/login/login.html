@@ -387,5 +387,61 @@
         $errorText.html($targetParent.siblings('.error-text-custom').html());
         $errorText.css('display', 'block');
     }
+
+
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.label-input-wishket').click(function() {
+            var input = $(this).find('theme-wishket');
+
+            // 클릭했을때 클래스명 'label-effect' 추가/제거
+            if (!$(this).hasClass('label-effect')) {
+                $(this).addClass('label-effect');
+            } else {
+                $(this).removeClass('label-effect');
+            }
+        });
+
+        // 입력값 있으면 클래스 유지하고 없으면 제거
+        $('.label-input-wishket input').on('input', function() {
+            var input = $(this);
+            var container = input.parent();
+
+            if (input.val().trim() !== '') {
+                container.addClass('label-effect');
+            } else {
+                container.removeClass('label-effect');
+            }
+        });
+
+        // 입력값이 있는 경우 'label-effect' 클래스 계속 추가해줌
+        $('.label-input-wishket input').each(function() {
+            var input = $(this);
+            var container = input.parent();
+
+            if (input.val().trim() !== '') {
+                container.addClass('label-effect');
+            }
+        });
+
+        // 다른 공간 클릭했을때 'label-effect' 클래스 제거
+        $(document).click(function(e) {
+            var target = e.target;
+            var containers = $('.label-input-wishket');
+
+            if (!$(target).is(containers) && !$(target).closest(containers).length) {
+                containers.each(function() {
+                    var input = $(this).find('input');
+                    var container = $(this);
+
+                    if (input.val().trim() === '') {
+                        container.removeClass('label-effect');
+                    }
+                });
+            }
+        });
+    });
 </script>
 </html>
