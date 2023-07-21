@@ -26,19 +26,6 @@
 <body class="wishket-member-signin wishket-member vsc-initialized"><img height="1"
                                                                         src="https://www.facebook.com/tr?id=1387208918241112&amp;ev=PageView&amp;noscript=1"
                                                                         style="display:none" width="1">
-<div id="facebook_shade" style="display: none"></div>
-<div id="facebook_wrapper" style="display: none">
-    <div id="facebook_lightbox">
-        <div id="facebook_alert_message" style="display: none;"></div>
-        <button id="facebook_change_message" onclick="social_login_change_message()" style="display: none"></button>
-        <div id="facebook_close" onclick="social_login_close()"
-             style="display: none;background-image: url(/static/renewal/img/wishket-member/icon_modal_close.png);background-image: -webkit-image-set(url(/static/renewal/img/wishket-member/icon_modal_close.png) 1x, url(/static/renewal/img/wishket-member/icon_modal_close%402x.png) 2x, url(/static/renewal/img/wishket-member/icon_modal_close%403x.png) 3x)"></div>
-        <div id="facebook_message_box">
-            <div id="facebook_message"></div>
-            <span id="backend_name">페이스북</span> 계정 연동 중 입니다.
-        </div>
-        <img alt="..." id="facebook_loading" src="/static/img/account/signup/facebook_loading.gif"></div>
-</div>
 <div class="gaia">
     <div class="wishket-member-signin-wrapper">
         <div class="logo-section">
@@ -321,13 +308,15 @@
         $('.label-input-wishket').click(function() {
             var input = $(this).find('theme-wishket');
 
-            // 입력값이 있는 경우 'label-effect' 유지
-            if (input.val().trim() !== '') {
+            // 클릭했을때 클래스명 'label-effect' 추가/제거
+            if (!$(this).hasClass('label-effect')) {
                 $(this).addClass('label-effect');
+            } else {
+                $(this).removeClass('label-effect');
             }
         });
 
-        // 입력값이 있는 경우 'label-effect' 클래스 계속 추가 (유지시켜줌)
+        // 입력값 있으면 클래스 유지하고 없으면 제거
         $('.label-input-wishket input').on('input', function() {
             var input = $(this);
             var container = input.parent();
@@ -339,7 +328,7 @@
             }
         });
 
-        // 입력값이 있는 경우 'label-effect' 클래스 추가
+        // 입력값이 있는 경우 'label-effect' 클래스 계속 추가해줌
         $('.label-input-wishket input').each(function() {
             var input = $(this);
             var container = input.parent();
@@ -349,7 +338,7 @@
             }
         });
 
-        // 다른 곳 클릭 시 'label-effect' 클래스 제거
+        // 다른 공간 클릭했을때 'label-effect' 클래스 제거
         $(document).click(function(e) {
             var target = e.target;
             var containers = $('.label-input-wishket');
